@@ -26,3 +26,8 @@ jobs:
       run: |
         set -e
         ./mvnw -V package
+    - name: upload package
+      uses: actions/upload-artifact@v2.3.1
+      with: 
+        name: acmeair-jar
+        path: target/acmeair-*.jar
